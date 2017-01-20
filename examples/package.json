@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "ListPicker example",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
   "dependencies": {
     "react": "15.3.1",
     "react-native": "0.32.0",
-    "react-native-country-picker-modal": "file:../"
+    "react-native-list-picker": "file:../"
   },
   "devDependencies": {
     "eslint": "2.10.2",

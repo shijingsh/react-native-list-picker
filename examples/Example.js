@@ -1,7 +1,3 @@
-/**
- * Sample React Native Country Picker Example App
- * https://github.com/xcarpentier/react-native-country-picker
- */
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -11,7 +7,7 @@ import {
   PixelRatio,
   TouchableOpacity,
 } from 'react-native';
-import ListPicker from 'react-native-country-picker-modal';
+import ListPicker from 'react-native-list-picker';
 
 const styles = StyleSheet.create({
   container: {
