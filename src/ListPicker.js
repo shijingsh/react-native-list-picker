@@ -1,7 +1,6 @@
 /**
- * react-native-country-picker
- * @author xcarpentier<contact@xaviercarpentier.com>
- * @flow
+ * react-native-list-picker
+ * @author liukefu
  */
 
 import React, { Component } from 'react';
@@ -11,7 +10,7 @@ import _ from 'lodash';
 import cca2List from '../data/cca2';
 import { getHeightPercent } from './ratio';
 import CloseButton from './CloseButton';
-import styles from './CountryPicker.style';
+import styles from './Picker.style';
 
 let countries = null;
 let Emoji = null;
@@ -33,7 +32,7 @@ if (isEmojiable) {
 
 const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
-export default class CountryPicker extends Component {
+export default class ListPicker extends Component {
   static propTypes = {
     cca2: React.PropTypes.string.isRequired,
     translation: React.PropTypes.string,
@@ -136,7 +135,7 @@ export default class CountryPicker extends Component {
     const country = countries[cca2];
     return (
       <View style={styles.itemCountry}>
-        {CountryPicker.renderFlag(cca2)}
+        {ListPicker.renderFlag(cca2)}
         <View style={styles.itemCountryName}>
           <Text style={styles.countryName}>
             {this.getCountryName(country)}
@@ -166,7 +165,7 @@ export default class CountryPicker extends Component {
   static renderFlag(cca2, itemStyle, emojiStyle, imageStyle) {
     return (
       <View style={[ styles.itemCountryFlag, itemStyle ]}>
-        {isEmojiable ? CountryPicker.renderEmojiFlag(cca2, emojiStyle) : CountryPicker.renderImageFlag(cca2, imageStyle)}
+        {isEmojiable ? ListPicker.renderEmojiFlag(cca2, emojiStyle) : ListPicker.renderImageFlag(cca2, imageStyle)}
       </View>
     );
   }
@@ -182,7 +181,7 @@ export default class CountryPicker extends Component {
               this.props.children
             :
               (<View style={styles.touchFlag}>
-                {CountryPicker.renderFlag(this.props.cca2)}
+                {ListPicker.renderFlag(this.props.cca2)}
               </View>)
           }
         </TouchableOpacity>

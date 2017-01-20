@@ -1,11 +1,11 @@
 {
-  "name": "react-native-country-picker-modal",
-  "version": "0.2.7",
-  "description": "Country picker",
-  "main": "src/CountryPicker.js",
+  "name": "react-native-list-picker",
+  "version": "0.0.1",
+  "description": "list data picker",
+  "main": "src/ListPicker.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xcarpentier/react-native-country-picker-modal.git"
+    "url": "git+https://github.com/liukefu2050/react-native-list-picker.git"
   },
   "scripts": {
     "lint": "eslint ./src",
@@ -20,12 +20,12 @@
     "country",
     "flag"
   ],
-  "author": "Xavier Carpentier <contact@xaviercarpentier.com> (http://xaviercarpentier.com/)",
+  "author": "liukefu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xcarpentier/react-native-country-picker-modal/issues"
+    "url": "https://github.com/liukefu2050/react-native-list-picker/issues"
   },
-  "homepage": "https://github.com/xcarpentier/react-native-country-picker-modal#readme",
+  "homepage": "https://github.com/liukefu2050/react-native-list-picker#readme",
   "dependencies": {
     "babel-preset-react-native-stage-0": "1.0.1",
     "lodash": "4.12.0",

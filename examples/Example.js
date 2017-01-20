@@ -11,7 +11,7 @@ import {
   PixelRatio,
   TouchableOpacity,
 } from 'react-native';
-import CountryPicker from 'react-native-country-picker-modal';
+import ListPicker from 'react-native-country-picker-modal';
 
 const styles = StyleSheet.create({
   container: {
@@ -63,7 +63,7 @@ export default class Example extends Component {
         <Text style={styles.welcome}>
           Welcome to Country Picker!
         </Text>
-        <CountryPicker
+        <ListPicker
           ref={(countryPicker) => { this.countryPicker = countryPicker; }}
           onChange={(value)=> this.setState({country: value, cca2: value.cca2})}
           cca2={this.state.cca2}
