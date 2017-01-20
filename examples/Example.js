@@ -57,7 +57,7 @@ export default class Example extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to Country Picker!
+          Welcome to Picker!
         </Text>
         <ListPicker
           ref={(countryPicker) => { this.countryPicker = countryPicker; }}
