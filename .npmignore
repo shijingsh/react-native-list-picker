@@ -1,4 +1,6 @@
 .git
+.idea
 example
+examples
 node_modules
 build
