@@ -23,7 +23,7 @@ export default StyleSheet.create({
     borderColor: '#eee',
     opacity: 0.8,
   },
-  emojiFlag: {
+  emoji: {
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 30,
@@ -32,26 +32,26 @@ export default StyleSheet.create({
     borderWidth: 1 / PixelRatio.get(),
     borderColor: 'transparent',
   },
-  itemCountry: {
+  item: {
     flexDirection: 'row',
     height: getHeightPercent(7),
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
-  itemCountryFlag: {
+  itemFlag: {
     justifyContent: 'center',
     alignItems: 'center',
     height: getHeightPercent(7),
     width: getWidthPercent(15),
   },
-  itemCountryName: {
+  itemName: {
     justifyContent: 'center',
     width: getWidthPercent(70),
     borderBottomWidth: 2 / PixelRatio.get(),
     borderBottomColor: '#ccc',
     height: getHeightPercent(7),
   },
-  countryName: {
+  name: {
     fontSize: getHeightPercent(2.2),
   },
   letters: {

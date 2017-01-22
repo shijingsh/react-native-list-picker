@@ -1,0 +1,107 @@
+{
+  "AF": {
+    "letter": "AFN",
+    "flag": "",
+    "name": "阿富汗"
+  },
+  "AL": {
+    "letter": "ALL",
+    "flag": "",
+    "name": "阿尔巴尼亚"
+  },
+  "DZ": {
+    "letter": "DZD",
+    "flag": "",
+    "name": "阿尔及利亚"
+  },
+  "AS": {
+    "letter": "USD",
+    "flag": "",
+    "name": "美属萨摩亚"
+  },
+  "AD": {
+    "letter": "EUR",
+    "flag": "",
+    "name": "安道尔"
+  },
+  "AO": {
+    "letter": "AOA",
+    "flag": "",
+    "name": "安哥拉"
+  },
+  "AI": {
+    "letter": "XCD",
+    "flag": "",
+    "name": "安圭拉"
+  },
+  "AQ": {
+    "letter": "XCD",
+    "flag": "",
+    "name": "南极洲"
+  },
+  "AG": {
+    "letter": "XCD",
+    "flag": "",
+    "name": "安提瓜和巴布达"
+  },
+  "AR": {
+    "letter": "ARS",
+    "flag": "",
+    "name": "阿根廷"
+  },
+  "AM": {
+    "letter": "AMD",
+    "flag": "",
+    "name": "亚美尼亚"
+  },
+  "AW": {
+    "letter": "AWG",
+    "flag": "",
+    "name": "阿鲁巴"
+  },
+  "AU": {
+    "letter": "AUD",
+    "flag": "",
+    "name": "澳大利亚"
+  },
+  "AT": {
+    "letter": "EUR",
+    "flag": "",
+    "name": "奥地利"
+  },
+  "AZ": {
+    "letter": "AZN",
+    "flag": "",
+    "name": "阿塞拜疆"
+  },
+  "BS": {
+    "letter": "BSD",
+    "flag": "",
+    "name": "巴哈马"
+  },
+  "BH": {
+    "letter": "BHD",
+    "flag": "",
+    "name": "巴林"
+  },
+  "BD": {
+    "letter": "BDT",
+    "flag": "",
+    "name": "孟加拉国"
+  },
+  "BB": {
+    "letter": "BBD",
+    "flag": "",
+    "name": "巴巴多斯"
+  },
+  "BY": {
+    "letter": "BYR",
+    "flag": "",
+    "name": "白俄罗斯"
+  },
+  "BE": {
+    "letter": "EUR",
+    "flag": "",
+    "name": "比利时"
+  }
+}

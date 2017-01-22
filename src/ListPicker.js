@@ -7,87 +7,57 @@ import React, {Component} from 'react';
 import {View, Image, TouchableOpacity, Modal, Text, ListView, Platform} from 'react-native';
 import _ from 'lodash';
 
-import cca2List from '../data/cca2';
 import {getHeightPercent} from './ratio';
 import CloseButton from './CloseButton';
 import styles from './Picker.style';
 
-let countries = null;
-let Emoji = null;
-
-// Maybe someday android get all flags emoji
-// but for now just ios
-// const isEmojiable = Platform.OS === 'ios' ||
-// (Platform.OS === 'android' && Platform.Version >= 21);
-const isEmojiable = Platform.OS === 'ios';
-
-if (isEmojiable) {
-    countries = require('../data/countries-emoji');
-    Emoji = require('react-native-emoji').default;
-} else {
-    countries = require('../data/countries');
-
-    Emoji = <View />;
-}
-
-const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-
 export default class ListPicker extends Component {
     static propTypes = {
-        cca2: React.PropTypes.string.isRequired,
-        translation: React.PropTypes.string,
         onChange: React.PropTypes.func.isRequired,
         closeable: React.PropTypes.bool,
-        children: React.PropTypes.node,
-    }
-    static defaultProps = {
-        translation: 'eng',
+        isEmojiable: React.PropTypes.bool,
+        dataList: React.PropTypes.object.isRequired
     }
 
-    state = {
-        modalVisible: false,
-        cca2List,
-        dataSource: ds.cloneWithRows(cca2List),
-    };
+    constructor(props) {
+        super(props);
+        let dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        this.state = {
+            modalVisible: false,
+            dataSource: dataSource,
+        };
 
-    onSelect(cca2) {
+        this.openModal = this.openModal.bind(this);
+        this.letters = _
+            .range('A'.charCodeAt(0), 'Z'.charCodeAt(0) + 1)
+            .map(n => String.fromCharCode(n).substr(0));
+
+        // dimensions of data list and window
+        this.itemHeight = getHeightPercent(7);
+        this.listHeight = this.props.dataList.length * this.itemHeight;
+    }
+
+
+    onSelect(row) {
         this.setState({
             modalVisible: false,
         });
 
-        this.props.onChange({
-            cca2,
-            ...countries[cca2],
-            flag: undefined,
-            name: this.getCountryName(countries[cca2]),
-        });
-    }
-
-    getCountryName(country, optionalTranslation) {
-        const translation = optionalTranslation || this.props.translation || 'eng';
-        return country.name[translation] || country.name.common;
+        this.props.onChange(row);
     }
 
     setVisibleListHeight(offset) {
         this.visibleListHeight = getHeightPercent(100) - offset;
     }
 
-    openModal = this.openModal.bind(this);
-    letters = _
-        .range('A'.charCodeAt(0), 'Z'.charCodeAt(0) + 1)
-        .map(n => String.fromCharCode(n).substr(0));
-
-    // dimensions of country list and window
-    itemHeight = getHeightPercent(7);
-    listHeight = countries.length * this.itemHeight;
 
     openModal() {
         this.setState({modalVisible: true});
     }
 
     scrollTo(letter) {
-        // find position of first country that starts with letter
-        const index = this.state.cca2List.map((country) => countries[country].name.common[0])
+        // find position of first data that starts with letter
+        const index = this.props.dataList.map((row) => row.letter[0])
             .indexOf(letter);
         if (index === -1) {
             return;
@@ -131,41 +101,40 @@ export default class ListPicker extends Component {
         );
     }
 
-    renderDetail(cca2) {
-        const country = countries[cca2];
+    renderDetail(row) {
         return (
-            <View style={styles.itemCountry}>
-                {ListPicker.renderFlag(cca2)}
-                <View style={styles.itemCountryName}>
-                    <Text style={styles.countryName}>
-                        {this.getCountryName(country)}
+            <View style={styles.item}>
+                {this.renderFlag(row)}
+                <View style={styles.itemName}>
+                    <Text style={styles.name}>
+                        {row.name}
                     </Text>
                 </View>
             </View>
         );
     }
 
-    static renderEmojiFlag(cca2, emojiStyle) {
+     renderEmoji(row) {
         return (
-            <Text style={[styles.emojiFlag, emojiStyle]}>
-                <Emoji name={countries[cca2].flag}/>
+            <Text style={[styles.emoji]}>
+                <Emoji name={row.icon}/>
             </Text>
         );
     }
 
-    static renderImageFlag(cca2, imageStyle) {
+     renderImage(row) {
         return (
             <Image
-                style={[styles.imgStyle, imageStyle]}
-                source={{uri: countries[cca2].flag}}
+                style={[styles.imgStyle]}
+                source={{uri: row.icon}}
             />
         );
     }
 
-    static renderFlag(cca2, itemStyle, emojiStyle, imageStyle) {
+    renderFlag(row) {
         return (
-            <View style={[styles.itemCountryFlag, itemStyle]}>
-                {isEmojiable ? ListPicker.renderEmojiFlag(cca2, emojiStyle) : ListPicker.renderImageFlag(cca2, imageStyle)}
+            <View style={[styles.itemFlag]}>
+                {this.props.isEmojiable ? this.renderEmoji(row) : this.renderImage(row)}
             </View>
         );
     }
@@ -173,18 +142,6 @@ export default class ListPicker extends Component {
     render() {
         return (
             <View>
-                <TouchableOpacity
-                    onPress={() => this.setState({modalVisible: true})}
-                    activeOpacity={0.7}>
-                    {
-                        this.props.children ?
-                            this.props.children
-                            :
-                            (<View style={styles.touchFlag}>
-                                {ListPicker.renderFlag(this.props.cca2)}
-                            </View>)
-                    }
-                </TouchableOpacity>
                 <Modal
                     visible={this.state.modalVisible}
                     onRequestClose={() => this.setState({modalVisible: false})}
@@ -197,10 +154,10 @@ export default class ListPicker extends Component {
                         <ListView
                             contentContainerStyle={styles.contentContainer}
                             ref={listView => this._listView = listView}
-                            dataSource={this.state.dataSource}
+                            dataSource={this.state.dataSource.cloneWithRows(this.props.dataList)}
                             renderRow={row => this.renderRow(row)}
                             initialListSize={30}
-                            pageSize={countries.length - 30}
+                            pageSize={this.props.dataList.length - 30}
                             onLayout={
                                 ({nativeEvent: {layout: {y: offset}}}) => this.setVisibleListHeight(offset)
                             }

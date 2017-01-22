@@ -6,6 +6,7 @@ import {
   StatusBar,
   PixelRatio,
   TouchableOpacity,
+  Platform
 } from 'react-native';
 import ListPicker from 'react-native-list-picker';
 
@@ -44,13 +45,12 @@ const styles = StyleSheet.create({
   }
 });
 
+let dataList =  require('./data/countries'); //require('./data/countries-emoji');
+
 export default class Example extends Component {
   constructor(props){
     StatusBar.setHidden(true);
     super(props);
-    this.state = {
-      cca2: 'US'
-    };
   }
 
   render() {
@@ -61,9 +61,10 @@ export default class Example extends Component {
         </Text>
         <ListPicker
           ref={(countryPicker) => { this.countryPicker = countryPicker; }}
-          onChange={(value)=> this.setState({country: value, cca2: value.cca2})}
-          cca2={this.state.cca2}
-          closeable
+          onChange={(value)=> this.setState({country: value})}
+          closeable = {true}
+          isEmojiable = {false}
+          dataList={dataList}
         />
         <Text style={styles.instructions}>
           press on the flag
