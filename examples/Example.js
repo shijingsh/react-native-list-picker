@@ -45,12 +45,15 @@ const styles = StyleSheet.create({
   }
 });
 
-let dataList =  require('./data/countries'); //require('./data/countries-emoji');
+let dataList =  require('./data/dataList'); //require('./data/dataList-emoji');
 
 export default class Example extends Component {
   constructor(props){
     StatusBar.setHidden(true);
     super(props);
+      this.state = {
+        pickData:null
+      }
   }
 
   render() {
@@ -60,23 +63,20 @@ export default class Example extends Component {
           Welcome to Picker!
         </Text>
         <ListPicker
-          ref={(countryPicker) => { this.countryPicker = countryPicker; }}
-          onChange={(value)=> this.setState({country: value})}
+          ref={(picker) => { this.picker = picker; }}
+          onChange={(value)=> this.setState({pickData: value})}
           closeable = {true}
           isEmojiable = {false}
           dataList={dataList}
         />
-        <Text style={styles.instructions}>
-          press on the flag
-        </Text>
-        <TouchableOpacity onPress={()=> this.countryPicker.openModal()}>
+        <TouchableOpacity onPress={()=> this.picker.openModal()}>
           <Text style={styles.link}>
-            or click here
+             click here
           </Text>
         </TouchableOpacity>
-        {this.state.country &&
+        {this.state.pickData &&
           <Text style={styles.data}>
-            {JSON.stringify(this.state.country, null, 2)}
+            {JSON.stringify(this.state.pickData, null, 2)}
           </Text>
         }
       </View>
