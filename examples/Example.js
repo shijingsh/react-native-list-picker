@@ -66,7 +66,7 @@ export default class Example extends Component {
           ref={(picker) => { this.picker = picker; }}
           onChange={(value)=> this.setState({pickData: value})}
           closeable = {true}
-          isEmojiable = {true}
+          isEmojiable = {false}
           dataList={dataList}
         />
         <TouchableOpacity onPress={()=> this.picker.openModal()}>
