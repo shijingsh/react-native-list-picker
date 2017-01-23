@@ -2,9 +2,9 @@
 
 The data Picker for React Native.
 
-| iOS | Android |
+| page 1 | page 2 |
 | --------|---------|
-|![](http://i.giphy.com/l2SpOUptMAEXW2jqU.gif)|![](http://i.giphy.com/26ufd30pDhSeEbIwE.gif)|
+|![](https://github.com/liukefu2050/react-native-list-picker/blob/master/images/picker1.jpg)|![](https://github.com/liukefu2050/react-native-list-picker/blob/master/images/picker2.jpg)|
 ## Installation
 ```bash
 $ npm i react-native-list-picker --save
