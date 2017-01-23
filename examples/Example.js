@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
   }
 });
 
-//let dataList =  require('./data/dataList');
-let dataList =  require('./data/dataList_emoji');
+let dataList =  require('./data/dataList');
+//let dataList =  require('./data/dataList_emoji');
 export default class Example extends Component {
   constructor(props){
     StatusBar.setHidden(true);
