@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
   }
 });
 
-let dataList =  require('./data/dataList'); //require('./data/dataList-emoji');
-
+//let dataList =  require('./data/dataList');
+let dataList =  require('./data/dataList_emoji');
 export default class Example extends Component {
   constructor(props){
     StatusBar.setHidden(true);
@@ -66,7 +66,7 @@ export default class Example extends Component {
           ref={(picker) => { this.picker = picker; }}
           onChange={(value)=> this.setState({pickData: value})}
           closeable = {true}
-          isEmojiable = {false}
+          isEmojiable = {true}
           dataList={dataList}
         />
         <TouchableOpacity onPress={()=> this.picker.openModal()}>

@@ -1,107 +1,107 @@
 {
   "AF": {
     "letter": "AFN",
-    "flag": "",
+    "icon": "flag-af",
     "name": "阿富汗"
   },
   "AL": {
     "letter": "ALL",
-    "flag": "",
+    "icon": "flag-al",
     "name": "阿尔巴尼亚"
   },
   "DZ": {
     "letter": "DZD",
-    "flag": "",
+    "icon": "flag-dz",
     "name": "阿尔及利亚"
   },
   "AS": {
     "letter": "USD",
-    "flag": "",
+    "icon": "flag-as",
     "name": "美属萨摩亚"
   },
   "AD": {
     "letter": "EUR",
-    "flag": "",
+    "icon": "flag-ad",
     "name": "安道尔"
   },
   "AO": {
     "letter": "AOA",
-    "flag": "",
+    "icon": "flag-ao",
     "name": "安哥拉"
   },
   "AI": {
     "letter": "XCD",
-    "flag": "",
+    "icon": "flag-ai",
     "name": "安圭拉"
   },
   "AQ": {
     "letter": "XCD",
-    "flag": "",
+    "icon": "flag-aq",
     "name": "南极洲"
   },
   "AG": {
     "letter": "XCD",
-    "flag": "",
+    "icon": "flag-ag",
     "name": "安提瓜和巴布达"
   },
   "AR": {
     "letter": "ARS",
-    "flag": "",
+    "icon": "flag-af",
     "name": "阿根廷"
   },
   "AM": {
     "letter": "AMD",
-    "flag": "",
+    "icon": "flag-af",
     "name": "亚美尼亚"
   },
   "AW": {
     "letter": "AWG",
-    "flag": "",
+    "icon": "flag-af",
     "name": "阿鲁巴"
   },
   "AU": {
     "letter": "AUD",
-    "flag": "",
+    "icon": "flag-af",
     "name": "澳大利亚"
   },
   "AT": {
     "letter": "EUR",
-    "flag": "",
+    "icon": "flag-af",
     "name": "奥地利"
   },
   "AZ": {
     "letter": "AZN",
-    "flag": "",
+    "icon": "flag-af",
     "name": "阿塞拜疆"
   },
   "BS": {
     "letter": "BSD",
-    "flag": "",
+    "icon": "flag-af",
     "name": "巴哈马"
   },
   "BH": {
     "letter": "BHD",
-    "flag": "",
+    "icon": "flag-af",
     "name": "巴林"
   },
   "BD": {
     "letter": "BDT",
-    "flag": "",
+    "icon": "flag-af",
     "name": "孟加拉国"
   },
   "BB": {
     "letter": "BBD",
-    "flag": "",
+    "icon": "flag-af",
     "name": "巴巴多斯"
   },
   "BY": {
     "letter": "BYR",
-    "flag": "",
+    "icon": "flag-af",
     "name": "白俄罗斯"
   },
   "BE": {
     "letter": "EUR",
-    "flag": "",
+    "icon": "flag-af",
     "name": "比利时"
   }
 }

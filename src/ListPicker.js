@@ -10,7 +10,8 @@ import _ from 'lodash';
 import {getHeightPercent} from './ratio';
 import CloseButton from './CloseButton';
 import styles from './Picker.style';
-
+import Emoji from 'react-native-emoji';
+//var Emoji = require('react-native-emoji').default;
 export default class ListPicker extends Component {
     static propTypes = {
         onChange: React.PropTypes.func.isRequired,
@@ -114,7 +115,7 @@ export default class ListPicker extends Component {
         );
     }
 
-     renderEmoji(row) {
+     static renderEmoji(row) {
         return (
             <Text style={[styles.emoji]}>
                 <Emoji name={row.icon}/>
@@ -122,7 +123,7 @@ export default class ListPicker extends Component {
         );
     }
 
-     renderImage(row) {
+    static renderImage(row) {
         return (
             <Image
                 style={[styles.imgStyle]}
@@ -134,7 +135,7 @@ export default class ListPicker extends Component {
     renderFlag(row) {
         return (
             <View style={[styles.itemFlag]}>
-                {this.props.isEmojiable ? this.renderEmoji(row) : this.renderImage(row)}
+                {this.props.isEmojiable ? ListPicker.renderEmoji(row) : ListPicker.renderImage(row)}
             </View>
         );
     }
