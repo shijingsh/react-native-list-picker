@@ -8,17 +8,13 @@
     "url": "git+https://github.com/liukefu2050/react-native-list-picker.git"
   },
   "scripts": {
-    "lint": "eslint ./src",
-    "gendata": "rm -rf ./data/countries.json && babel-node ./scripts/transform-world-countries.js > ./data/countries.json",
-    "gendata-emoji": "rm -rf ./data/countries-emoji.json && babel-node ./scripts/transform-world-countries.js --emoji > ./data/countries-emoji.json",
-    "gendata-cca2": "rm -rf ./data/cca2.json && babel-node ./scripts/transform-world-countries.js --cca2 > ./data/cca2.json"
+    "lint": "eslint ./src"
   },
   "keywords": [
     "react-native",
-    "components",
-    "country-picker",
-    "country",
-    "flag"
+    "data-picker",
+    "picker",
+    "select"
   ],
   "author": "liukefu",
   "license": "MIT",
