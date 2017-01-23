@@ -1,6 +1,6 @@
 {
   "name": "react-native-list-picker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "list data picker",
   "main": "src/ListPicker.js",
   "repository": {
