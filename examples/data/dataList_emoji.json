@@ -1,107 +1,106 @@
-{
-  "AF": {
+[{
     "letter": "AFN",
     "icon": "flag-af",
     "name": "阿富汗"
   },
-  "AL": {
+  {
     "letter": "ALL",
     "icon": "flag-al",
     "name": "阿尔巴尼亚"
   },
-  "DZ": {
+  {
     "letter": "DZD",
     "icon": "flag-dz",
     "name": "阿尔及利亚"
   },
-  "AS": {
+  {
     "letter": "USD",
     "icon": "flag-as",
     "name": "美属萨摩亚"
   },
-  "AD": {
+  {
     "letter": "EUR",
     "icon": "flag-ad",
     "name": "安道尔"
   },
-  "AO": {
+  {
     "letter": "AOA",
     "icon": "flag-ao",
     "name": "安哥拉"
   },
-  "AI": {
+  {
     "letter": "XCD",
     "icon": "flag-ai",
     "name": "安圭拉"
   },
-  "AQ": {
+  {
     "letter": "XCD",
     "icon": "flag-aq",
     "name": "南极洲"
   },
-  "AG": {
+  {
     "letter": "XCD",
     "icon": "flag-ag",
     "name": "安提瓜和巴布达"
   },
-  "AR": {
+  {
     "letter": "ARS",
     "icon": "flag-af",
     "name": "阿根廷"
   },
-  "AM": {
+  {
     "letter": "AMD",
     "icon": "flag-af",
     "name": "亚美尼亚"
   },
-  "AW": {
+  {
     "letter": "AWG",
     "icon": "flag-af",
     "name": "阿鲁巴"
   },
-  "AU": {
+  {
     "letter": "AUD",
     "icon": "flag-af",
     "name": "澳大利亚"
   },
-  "AT": {
+  {
     "letter": "EUR",
     "icon": "flag-af",
     "name": "奥地利"
   },
-  "AZ": {
+  {
     "letter": "AZN",
     "icon": "flag-af",
     "name": "阿塞拜疆"
   },
-  "BS": {
+  {
     "letter": "BSD",
     "icon": "flag-af",
     "name": "巴哈马"
   },
-  "BH": {
+  {
     "letter": "BHD",
     "icon": "flag-af",
     "name": "巴林"
   },
-  "BD": {
+  {
     "letter": "BDT",
     "icon": "flag-af",
     "name": "孟加拉国"
   },
-  "BB": {
+  {
     "letter": "BBD",
     "icon": "flag-af",
     "name": "巴巴多斯"
   },
-  "BY": {
+  {
     "letter": "BYR",
     "icon": "flag-af",
     "name": "白俄罗斯"
   },
-  "BE": {
+  {
     "letter": "EUR",
     "icon": "flag-af",
     "name": "比利时"
   }
-}
+]

@@ -17,7 +17,12 @@ export default class ListPicker extends Component {
         onChange: React.PropTypes.func.isRequired,
         closeable: React.PropTypes.bool,
         isEmojiable: React.PropTypes.bool,
-        dataList: React.PropTypes.object.isRequired
+        dataList: React.PropTypes.array.isRequired
+    }
+    static defaultProps = {
+        closeable: true,
+        isEmojiable:false,
+        dataList:[]
     }
 
     constructor(props) {
@@ -38,7 +43,6 @@ export default class ListPicker extends Component {
         this.listHeight = this.props.dataList.length * this.itemHeight;
     }
 
-
     onSelect(row) {
         this.setState({
             modalVisible: false,
@@ -51,15 +55,20 @@ export default class ListPicker extends Component {
         this.visibleListHeight = getHeightPercent(100) - offset;
     }
 
-
     openModal() {
         this.setState({modalVisible: true});
     }
 
     scrollTo(letter) {
         // find position of first data that starts with letter
-        const index = this.props.dataList.map((row) => row.letter[0])
-            .indexOf(letter);
+        let str = this.props.dataList.map((row) => {
+            //console.log(row)
+            if(row.letter){
+                return row.letter.charAt(0);
+            }
+           return 'A'
+        });
+        let  index = str.indexOf(letter);
         if (index === -1) {
             return;
         }
