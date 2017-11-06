@@ -6,18 +6,18 @@
 import React, {Component} from 'react';
 import {View, Image, TouchableOpacity, Modal, Text, ListView, Platform} from 'react-native';
 import _ from 'lodash';
-
+import PropTypes from 'prop-types';
 import {getHeightPercent} from './ratio';
 import CloseButton from './CloseButton';
 import styles from './Picker.style';
-import Emoji from 'react-native-emoji';
+import Emoji from './Emoji';
 //var Emoji = require('react-native-emoji').default;
 export default class ListPicker extends Component {
     static propTypes = {
-        onChange: React.PropTypes.func.isRequired,
-        closeable: React.PropTypes.bool,
-        isEmojiable: React.PropTypes.bool,
-        dataList: React.PropTypes.array.isRequired
+        onChange: PropTypes.func.isRequired,
+        closeable: PropTypes.bool,
+        isEmojiable: PropTypes.bool,
+        dataList: PropTypes.array.isRequired
     }
     static defaultProps = {
         closeable: true,
