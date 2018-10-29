@@ -1,6 +1,6 @@
 {
   "name": "react-native-list-picker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "list data picker",
   "main": "src/ListPicker.js",
   "repository": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/liukefu2050/react-native-list-picker#readme",
   "dependencies": {
     "babel-preset-react-native-stage-0": "1.0.1",
-    "lodash": "4.12.0",
+    "lodash": "4.17.11",
     "node-emoji": "1.3.1",
     "prop-types": "^15.6.0",
     "world-countries": "1.8.0"
