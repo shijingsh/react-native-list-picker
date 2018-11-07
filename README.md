@@ -124,8 +124,8 @@ export default class Example extends Component {
 
 ## Contribution
 
-- [@liukefu](mailto:liukefu2020@sina.com) The main author.
-
+* [@xcapentier](mailto:contact@xaviercarpentier.com) The main author. [@liukefu](mailto:liukefu2020@sina.com)
+* thanks to [react-native-country-picker](https://github.com/xcarpentier/react-native-country-picker)
 ## Questions
 
 Feel free to [contact me](mailto:liukefu2020@sina.com) or [create an issue](https://github.com/liukefu2050/react-native-list-picker/issues/new)
